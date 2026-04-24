@@ -81,6 +81,15 @@ const Auth = () => {
             By continuing you agree to play fair and have fun.
           </p>
         </div>
+        {/* Back to Home Button */}
+        <Button
+          variant="outline"
+          size="lg"
+          className="mt-8"
+          onClick={() => navigate("/")}
+        >
+          ← Back to Home
+        </Button>
       </div>
     </div>
   );
