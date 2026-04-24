@@ -1,7 +1,7 @@
-# GrammarQuest Vercel Deployment Guide
+# BrainLearn Vercel Deployment Guide
 
 ## Overview
-GrammarQuest is deployed on Vercel (frontend) + Supabase (backend). This guide walks you through the complete setup process.
+BrainLearn is deployed on Vercel (frontend) + Supabase (backend). This guide walks you through the complete setup process.
 
 ## Architecture
 - **Frontend**: Vercel (React + Vite)

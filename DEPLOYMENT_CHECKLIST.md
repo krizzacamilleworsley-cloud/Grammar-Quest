@@ -1,4 +1,4 @@
-# Vercel Deployment Checklist for GrammarQuest
+# Vercel Deployment Checklist for BrainLearn
 
 ## Pre-Deployment Checklist
 

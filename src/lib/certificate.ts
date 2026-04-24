@@ -122,8 +122,8 @@ export function buildCertificate(data: CertificateData): { doc: jsPDF; filename:
   doc.setFont("helvetica", "normal");
   doc.setFontSize(13);
   const subtitle = isChampion
-    ? "GRAMMARQUEST  |  ENGLISH CHAMPION"
-    : `GRAMMARQUEST  |  ${meta?.label.toUpperCase() ?? ""} LEVEL`;
+    ? "BRAINLEARN  |  ENGLISH CHAMPION"
+    : `BRAINLEARN  |  ${meta?.label.toUpperCase() ?? ""} LEVEL`;
   doc.text(subtitle, w / 2, 158, { align: "center" });
 
   // Tier badge (text only — emoji glyphs are not in Helvetica)
@@ -192,7 +192,7 @@ export function buildCertificate(data: CertificateData): { doc: jsPDF; filename:
   doc.text("Date", 220, h - 92, { align: "center" });
   doc.text(date, 220, h - 75, { align: "center" });
 
-  doc.text("GrammarQuest Academy", w - 220, h - 92, { align: "center" });
+  doc.text("BrainLearn Academy", w - 220, h - 92, { align: "center" });
   doc.setTextColor(217, 70, 239);
   doc.text(`${tier.label} SEAL`, w - 220, h - 75, { align: "center" });
   // Star flourishes around the seal label
@@ -203,8 +203,8 @@ export function buildCertificate(data: CertificateData): { doc: jsPDF; filename:
 
   const safeName = data.name.replace(/\s+/g, "_");
   const filename = isChampion
-    ? `GrammarQuest-Champion-${safeName}.pdf`
-    : `GrammarQuest-${meta?.label ?? "Level"}-${tier.label}-${safeName}.pdf`;
+    ? `BrainLearn-Champion-${safeName}.pdf`
+    : `BrainLearn-${meta?.label ?? "Level"}-${tier.label}-${safeName}.pdf`;
 
   return { doc, filename };
 }

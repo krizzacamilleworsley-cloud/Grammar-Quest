@@ -55,6 +55,10 @@ const Quiz = () => {
   const [previewFilename, setPreviewFilename] = useState<string>("certificate.pdf");
   const [timeLeft, setTimeLeft] = useState(0);
   const [lastBonus, setLastBonus] = useState<{ xp: number; tier: "fast" | "quick" | "normal" | "miss" } | null>(null);
+
+  const correctAudioRef = useRef<HTMLAudioElement>(null);
+  const wrongAudioRef = useRef<HTMLAudioElement>(null);
+  const bgmAudioRef = useRef<HTMLAudioElement>(null);
   const intervalRef = useRef<number | null>(null);
 
   const totalSeconds = meta?.secondsPerQuestion ?? 20;
@@ -82,6 +86,20 @@ const Quiz = () => {
       })
       .finally(() => setLoadingQs(false));
   }, [level, meta]);
+
+  // Background Music Control
+  useEffect(() => {
+    const audio = bgmAudioRef.current;
+    if (audio && !loadingQs && !done) {
+      audio.loop = true;
+      audio.play().catch((e) => console.log("BGM playback failed:", e));
+    }
+    return () => {
+      if (audio) {
+        audio.pause();
+      }
+    };
+  }, [loadingQs, done]);
 
   // Per-question countdown timer
   useEffect(() => {

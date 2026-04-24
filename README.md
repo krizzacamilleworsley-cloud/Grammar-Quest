@@ -1,4 +1,4 @@
-# 🎮 Level Up English - Gamified English Learning Platform
+# 🎮 BrainLearn - Gamified English Learning Platform
 
 A modern, interactive English language learning platform that transforms education into an engaging gaming experience. Users can progress through difficulty levels, earn experience points (XP), unlock badges, and compete on leaderboards.
 

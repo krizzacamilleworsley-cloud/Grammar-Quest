@@ -1,4 +1,4 @@
-# 🚀 Quick Start: Deploy GrammarQuest to Vercel
+# 🚀 Quick Start: Deploy BrainLearn to Vercel
 
 ## Your App is Ready! Here's What to Do:
 
